@@ -2,14 +2,17 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "css-build": "node-sass --omit-source-map-url css/bulma/bulma.scss css/bulma/bulma.css",
+    "build": "npm run css-build && nuxt build",
+    "dev": "npm run css-build && nuxt dev",
+    "generate": "npm run css-build && nuxt generate",
+    "preview": "npm run css-build && nuxt preview",
+    "postinstall": "npm run css-build && nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "bulma": "^0.9.4",
+    "node-sass": "^9.0.0",
     "nuxt": "^3.7.1"
   }
 }
