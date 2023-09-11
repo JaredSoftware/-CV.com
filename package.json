@@ -1,18 +1,22 @@
 {
-  "name": "nuxt-app",
+  "name": "crynuxt2",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url css/bulma/bulma.scss css/bulma/bulma.css",
-    "build": "npm run css-build && nuxt build",
-    "dev": "npm run css-build && nuxt dev",
-    "generate": "npm run css-build && nuxt generate",
-    "preview": "npm run css-build && nuxt preview",
-    "postinstall": "npm run css-build && nuxt prepare"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "bulma": "^0.9.4",
-    "node-sass": "^9.0.0",
-    "nuxt": "^3.7.1"
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "postcss": "^8.4.17"
   }
 }
