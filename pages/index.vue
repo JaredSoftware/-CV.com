@@ -8,8 +8,8 @@
 export default {
   methods: {
     handleClick() {
-      console.log('¡Haz hecho clic en el botón!')
-    }
+      console.log("¡Haz hecho clic en el botón!");
+    },
   }
-}
+};
 </script>

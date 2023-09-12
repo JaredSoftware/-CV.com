@@ -18,7 +18,23 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
+  router: {
+    extendRoutes(routes) {
+      routes.forEach((route) => {
+        // When options.generate.subFolders is true (default)
+        const alias =
+          route.path.length > 1 ? `${route.path}/index.html` : '/index.html'
+        // When options.generate.subFolders is false
+        // const normalizedRoute = route.path.replace(/\/$/, '') // Remove trailing slashes if they exist
+        // const alias =
+        //   route.path.length > 1 ? `${normalizedRoute}.html` : '/index.html'
+        route.alias = alias
+      })
+    }
+  },
+  generate: {
+    subFolders: true // Configura generate.subFolders según tus preferencias
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -39,8 +55,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }
