@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fnombre-del-repositorio\u002F_nuxt\u002Fstatic\u002F1694481854",layout:"default",error:a,serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fnombre-del-repositorio\u002F",assetsPath:"\u002Fnombre-del-repositorio\u002F_nuxt\u002F",cdnURL:a}}}}(null));
