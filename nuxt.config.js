@@ -19,6 +19,7 @@ export default {
     ]
   },
   router: {
+    base: '/nombre-del-repositorio/',
     extendRoutes(routes) {
       routes.forEach((route) => {
         // When options.generate.subFolders is true (default)
