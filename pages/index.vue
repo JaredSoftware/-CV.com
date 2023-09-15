@@ -5,26 +5,77 @@
     <h3 class="font-bold text-2xl text-blue-700">Perfil</h3>
     <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
     <p>
-      Dentro de mi experiencia en desarrollo de software web, he adquirido
-      amplios conocimientos en tecnologías como Node.js, MongoDB, JavaScript,
-      CSS, HTML, jQuery y Bootstrap. He tenido la oportunidad de crear API
-      RESTful, API de una sola página y API simples, y tengo experiencia en
-      brindar soporte de aplicaciones para satisfacer las necesidades de los
-      clientes.
+      Con una sólida experiencia en el desarrollo de aplicaciones web, he
+      adquirido conocimientos profundos en una amplia variedad de tecnologías
+      clave que abarcan tanto el lado del servidor como el cliente. Mi conjunto
+      de habilidades incluye:
     </p>
-    <br />
-    <p>
-      Además, tengo habilidades en el uso de microservicios en el backend, así
-      como en el trabajo con marcos NPM. Adicionalmente, cuento con experiencia
-      en sistemas Avaya Control Manager, Workspaces, Site Administrator, entre
-      otros.
-    </p>
-    <br />
-    <p>
-      También tengo habilidades en el desarrollo frontend usando React, así como
-      en el desarrollo de API RESTful. Finalmente, tengo experiencia en el
-      desarrollo de aplicaciones con bases de datos en MongoDB, PostgreSQL y
-      SQL.
+    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+      Desarrollo Frontend:
+    </h2>
+    <ul
+      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+    >
+      <li>
+        Uso experto de Vue para crear interfaces de usuario dinámicas y
+        atractivas.
+      </li>
+      <li>
+        Competencia en el desarrollo de API RESTful para garantizar una
+        comunicación eficiente entre el frontend y el backend.
+      </li>
+      <li>
+        Habilidad para crear interfaces atractivas y funcionales mediante la
+        combinación de socket.io, JavaScript, CSS, HTML, vue, bulma, tailwind y
+        Bootstrap.
+      </li>
+    </ul>
+    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+      Desarrollo Backend:
+    </h2>
+    <ul
+      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+    >
+      <li>
+        Amplia experiencia en Node.js y express para la creación de servidores
+        robustos y escalables.
+      </li>
+      <li>
+        Competencia en el diseño e implementación de microservicios, lo que
+        permite la construcción de sistemas altamente modulares y flexibles.
+      </li>
+      <li>
+        Conocimiento profundo de bases de datos, incluyendo MongoDB, PostgreSQL
+        y SQL, para gestionar eficientemente los datos de la aplicación.
+      </li>
+    </ul>
+    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+      Herramientas y Gestión:
+    </h2>
+    <ul
+      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+    >
+      <li>
+        Uso eficiente de marcos NPM y PM2 para gestionar dependencias y mejorar
+        la eficiencia del flujo de trabajo.
+      </li>
+      <li>
+        Experiencia en la administración de sistemas Avaya, incluyendo Control
+        Manager, Workspaces y Site Administrator, entre otros.
+      </li>
+      <li>
+        He tenido la oportunidad de trabajar en una variedad de proyectos, desde
+        la creación de API RESTful simples hasta el desarrollo de aplicaciones
+        de una sola página altamente interactivas. Mi enfoque principal es
+        brindar soluciones que cumplan con las necesidades de los clientes y
+        ofrezcan una experiencia de usuario excepcional.
+      </li>
+    </ul>
+    <p class="mt-2">
+      En resumen, soy un desarrollador full-stack apasionado y altamente
+      competente que puede llevar a cabo proyectos desde la concepción hasta la
+      implementacreión, garantizando que tanto el frontend como el backend
+      funcionen en perfecta armonía para ofrecer resultados excepcionales.
     </p>
   </div>
   <div
@@ -241,6 +292,22 @@
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
               >7.0</span
+            >
+          </dd>
+        </dl>
+        <dl class="mt-3">
+          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
+            Pm2
+          </dt>
+          <dd class="flex items-center">
+            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+              <div
+                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                style="width: 90%"
+              ></div>
+            </div>
+            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
+              >9.0</span
             >
           </dd>
         </dl>
@@ -514,7 +581,7 @@
     </ul>
   </div>
 </template>
-      
+
 <script>
 export default {};
 </script>
