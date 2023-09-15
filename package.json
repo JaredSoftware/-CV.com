@@ -10,6 +10,11 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "autoprefixer": "^10.4.15",
     "nuxt": "^3.7.1"
+  },
+  "dependencies": {
+    "flowbite": "^1.8.1"
   }
 }

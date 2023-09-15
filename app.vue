@@ -1,15 +1,10 @@
 <template>
-  <div>
-    <button @click="handleClick()">hola</button>
+  <Layout />
+  <div class="p-4 sm:ml-72">
+    <div
+      class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-24"
+    >
+      <NuxtPage />
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    handleClick() {
-      console.log("¡Haz hecho clic en el botón!");
-    },
-  }
-};
-</script>

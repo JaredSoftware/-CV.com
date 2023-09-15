@@ -1,0 +1,1 @@
+import{_ as n,l as t,m as l,k as c}from"./entry.c5dd5c46.js";const a={methods:{handleClick(){console.log("¡Haz hecho clic en el botón!")}}};function s(r,e,d,i,p,o){return c(),t("div",null,[l("button",{onClick:e[0]||(e[0]=_=>o.handleClick())},"hola")])}const k=n(a,[["render",s]]);export{k as default};
