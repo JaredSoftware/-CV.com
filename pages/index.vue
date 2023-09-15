@@ -112,7 +112,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.8</span
+              >9.5</span
             >
           </dd>
         </dl>
@@ -128,7 +128,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
+              >9.0</span
             >
           </dd>
         </dl>
@@ -208,7 +208,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
+              >5.0</span
             >
           </dd>
         </dl>
@@ -225,6 +225,22 @@
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
               >8.9</span
+            >
+          </dd>
+        </dl>
+        <dl class="mt-3">
+          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
+            Ubuntu
+          </dt>
+          <dd class="flex items-center">
+            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+              <div
+                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                style="width: 70%"
+              ></div>
+            </div>
+            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
+              >7.0</span
             >
           </dd>
         </dl>
@@ -322,7 +338,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
+              >7.0</span
             >
           </dd>
         </dl>
@@ -338,7 +354,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
+              >9.5</span
             >
           </dd>
         </dl>
@@ -355,6 +371,22 @@
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
               >8.9</span
+            >
+          </dd>
+        </dl>
+        <dl class="mt-3">
+          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
+            CentOs
+          </dt>
+          <dd class="flex items-center">
+            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+              <div
+                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                style="width: 70%"
+              ></div>
+            </div>
+            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
+              >7.0</span
             >
           </dd>
         </dl>
@@ -381,7 +413,7 @@
               ></div>
             </div>
             <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.8</span
+              >7.5</span
             >
           </dd>
         </dl>
