@@ -446,7 +446,19 @@ const toolsPoints = computed(() => getTranslationArray('profile.tools.points'))
 
 const downloadCV = () => {
   // Abrir la página del CV ATS donde se puede generar el PDF
-  window.open('/cv-ats', '_blank')
+  // En desarrollo usa /dist/cv-ats, en producción usa /cv-ats
+  if (process.client) {
+    const router = useRouter()
+    const currentUrl = window.location.href
+    const isDev = currentUrl.includes('localhost') || currentUrl.includes('127.0.0.1') || currentUrl.includes(':3000')
+    
+    // En desarrollo, usar la base /dist/, en producción usar la ruta relativa
+    const cvAtsPath = isDev 
+      ? (router.options.history?.base || '/dist/') + 'cv-ats' 
+      : '/cv-ats'
+    
+    window.open(cvAtsPath, '_blank')
+  }
 }
 </script>
 
