@@ -1,0 +1,134 @@
+{
+  "name": "Jared Wesley Vargas Cortes",
+  "title": "Full Stack Developer",
+  "description": "Passionate and highly competent full-stack developer who can carry out projects from conception to implementation, ensuring that both frontend and backend work in perfect harmony to deliver exceptional results.",
+  "downloadCV": "Download CV",
+  "sections": {
+    "professionalProfile": "Professional Profile",
+    "workExperience": "Work Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "internships": "Internships",
+    "contactInfo": "Contact Information",
+    "skills": "Skills",
+    "languages": "Languages",
+    "hobbies": "Hobbies & Interests"
+  },
+  "profile": {
+    "intro": "With solid experience in web application development, I have acquired deep knowledge in a wide variety of key technologies covering both the server and client sides.",
+    "frontend": {
+      "title": "Frontend Development:",
+      "points": [
+        "Expert use of Vue to create dynamic and attractive user interfaces.",
+        "Competence in RESTful API development to ensure efficient communication between frontend and backend.",
+        "Ability to create attractive and functional interfaces through the combination of socket.io, JavaScript, CSS, HTML, vue, bulma, tailwind and Bootstrap."
+      ]
+    },
+    "backend": {
+      "title": "Backend Development:",
+      "points": [
+        "Extensive experience in Node.js and express for creating robust and scalable servers.",
+        "Competence in designing and implementing microservices, enabling the construction of highly modular and flexible systems.",
+        "Deep knowledge of databases, including MongoDB, PostgreSQL and SQL, to efficiently manage application data."
+      ]
+    },
+    "tools": {
+      "title": "Tools and Management:",
+      "points": [
+        "Efficient use of NPM and PM2 frameworks to manage dependencies and improve workflow efficiency.",
+        "Experience in Avaya systems administration, including Control Manager, Workspaces and Site Administrator, among others.",
+        "I have had the opportunity to work on a variety of projects, from creating simple RESTful APIs to developing highly interactive single-page applications."
+      ]
+    }
+  },
+  "experience": {
+    "freelance": {
+      "position": "Full Stack Developer",
+      "company": "Freelance",
+      "period": "May 2022 - Present",
+      "description": "Development for various clients, providing development support and solutions to specific needs."
+    },
+    "bercont": {
+      "position": "Developer",
+      "company": "Bercont",
+      "period": "May 2021 - May 2022",
+      "description": "Development with node.js and MongoDB, to provide applications that allow facilitating solutions to clients."
+    }
+  },
+  "projects": {
+    "fintech": {
+      "name": "Fintech App Redesign",
+      "role": "Lead Designer",
+      "description": "Simplified user flows and UI, leading to a 25% increase in daily active users."
+    },
+    "analytics": {
+      "name": "Analytics Dashboard",
+      "role": "UX/UI Designer",
+      "description": "Created a data visualization platform that reduced report generation time by 50%."
+    },
+    "ecommerce": {
+      "name": "E-commerce Platform",
+      "role": "Product Designer",
+      "description": "Designed a new checkout experience that decreased cart abandonment by 15%."
+    }
+  },
+  "education": {
+    "technician": {
+      "degree": "Software Development Technician",
+      "period": "June 2021",
+      "description": "Learning the Fundamentals of software development"
+    },
+    "highschool": {
+      "degree": "High School",
+      "period": "November 2019",
+      "description": "Secondary Education"
+    }
+  },
+  "internships": {
+    "bercont": {
+      "company": "Bercont",
+      "period": "January 2021 - May 2021",
+      "description": "Support in various tasks and assistance to an engineer in charge of software"
+    }
+  },
+  "skills": {
+    "languages": "Languages and Frameworks",
+    "databases": "Databases",
+    "tools": "Tools and Styles",
+    "aptitudes": "Skills"
+  },
+  "languages": {
+    "english": "English",
+    "level": "7.5/10"
+  },
+  "hobbies": {
+    "music": "Music recording and production",
+    "learning": "Learning Various Software Languages for any situation"
+  },
+  "contact": {
+    "email": "jaredwesley27{'@'}hotmail.com",
+    "phone": "+573229266046",
+    "location": "Bogotá, Colombia",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "rights": "© 2024 Jared Wesley Vargas Cortes. All rights reserved.",
+    "portfolio": "Portfolio",
+    "linkedin": "LinkedIn",
+    "contact": "Contact"
+  },
+  "theme": {
+    "toggle": "Change theme",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "common": {
+    "present": "Present"
+  },
+  "languageSelector": {
+    "selectLanguage": "Select language"
+  }
+}
+

@@ -2,8 +2,8 @@
   <button
     @click="toggleTheme"
     class="fixed top-4 right-4 z-50 p-3 rounded-lg bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark shadow-soft hover:shadow-lg transition-all duration-300 group"
-    :aria-label="currentTheme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-    title="Cambiar tema"
+    :aria-label="currentTheme === 'dark' ? $t('theme.toLight') : $t('theme.toDark')"
+    :title="$t('theme.toggle')"
   >
     <span 
       v-if="currentTheme === 'dark'" 

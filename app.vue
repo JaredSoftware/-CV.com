@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LanguageSelector v-if="showLanguageSelector" />
     <ThemeToggle v-if="showThemeToggle" />
     <NuxtPage />
   </div>
@@ -7,15 +8,28 @@
 
 <script setup>
 const route = useRoute()
+const { locale } = useI18n()
+
 const showThemeToggle = computed(() => {
   // No mostrar el toggle en la página CV ATS
   return route.path !== '/cv-ats' && route.path !== '/dist/cv-ats'
 })
 
+const showLanguageSelector = computed(() => {
+  // No mostrar el selector de idioma en la página CV ATS
+  return route.path !== '/cv-ats' && route.path !== '/dist/cv-ats'
+})
+
+watch(locale, (newLocale) => {
+  if (process.client) {
+    document.documentElement.lang = newLocale
+  }
+})
+
 useHead({
   htmlAttrs: {
     class: 'light',
-    lang: 'en'
+    lang: locale.value
   },
   script: [
     {
