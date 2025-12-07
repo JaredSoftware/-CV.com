@@ -1,602 +1,393 @@
 <template>
-  <div
-    class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Perfil</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-    <p>
-      Con una sólida experiencia en el desarrollo de aplicaciones web, he
-      adquirido conocimientos profundos en una amplia variedad de tecnologías
-      clave que abarcan tanto el lado del servidor como el cliente. Mi conjunto
-      de habilidades incluye:
-    </p>
-    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-      Desarrollo Frontend:
-    </h2>
-    <ul
-      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-    >
-      <li>
-        Uso experto de Vue para crear interfaces de usuario dinámicas y
-        atractivas.
-      </li>
-      <li>
-        Competencia en el desarrollo de API RESTful para garantizar una
-        comunicación eficiente entre el frontend y el backend.
-      </li>
-      <li>
-        Habilidad para crear interfaces atractivas y funcionales mediante la
-        combinación de socket.io, JavaScript, CSS, HTML, vue, bulma, tailwind y
-        Bootstrap.
-      </li>
-    </ul>
-    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-      Desarrollo Backend:
-    </h2>
-    <ul
-      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-    >
-      <li>
-        Amplia experiencia en Node.js y express para la creación de servidores
-        robustos y escalables.
-      </li>
-      <li>
-        Competencia en el diseño e implementación de microservicios, lo que
-        permite la construcción de sistemas altamente modulares y flexibles.
-      </li>
-      <li>
-        Conocimiento profundo de bases de datos, incluyendo MongoDB, PostgreSQL
-        y SQL, para gestionar eficientemente los datos de la aplicación.
-      </li>
-    </ul>
-    <h2 class="mt-4 mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-      Herramientas y Gestión:
-    </h2>
-    <ul
-      class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-    >
-      <li>
-        Uso eficiente de marcos NPM y PM2 para gestionar dependencias y mejorar
-        la eficiencia del flujo de trabajo.
-      </li>
-      <li>
-        Experiencia en la administración de sistemas Avaya, incluyendo Control
-        Manager, Workspaces y Site Administrator, entre otros.
-      </li>
-      <li>
-        He tenido la oportunidad de trabajar en una variedad de proyectos, desde
-        la creación de API RESTful simples hasta el desarrollo de aplicaciones
-        de una sola página altamente interactivas. Mi enfoque principal es
-        brindar soluciones que cumplan con las necesidades de los clientes y
-        ofrezcan una experiencia de usuario excepcional.
-      </li>
-    </ul>
-    <p class="mt-2">
-      En resumen, soy un desarrollador full-stack apasionado y altamente
-      competente que puede llevar a cabo proyectos desde la concepción hasta la
-      implementacreión, garantizando que tanto el frontend como el backend
-      funcionen en perfecta armonía para ofrecer resultados excepcionales.
-    </p>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Formación</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-    <ol class="relative border-l border-gray-200 dark:border-gray-700">
-      <li class="mb-10 ml-4">
-        <div
-          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time
-          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-          >Noviembre 2019</time
-        >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Bachiller
-        </h3>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-          Educación Media.
-        </p>
-      </li>
-      <li class="mb-10 ml-4">
-        <div
-          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time
-          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-          >Junio 2021</time
-        >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Tecnico En Desarrollo De Software
-        </h3>
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-          Aprendizaje en las Bases del desarrollo de software
-        </p>
-      </li>
-    </ol>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Experiencia Laboral</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-    <ol class="relative border-l border-gray-200 dark:border-gray-700">
-      <li class="mb-10 ml-4">
-        <div
-          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time
-          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-          >Mayo 2021 | Mayo 2022</time
-        >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Bercont
-        </h3>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-          Desarrollo con node.js y MongoDB, para brindar apliciones que permitan
-          facilitar soluciones a clientes
-        </p>
-      </li>
-      <li class="mb-10 ml-4">
-        <div
-          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time
-          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-          >Mayo 2022 | Presente</time
-        >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          FreeLance
-        </h3>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-          Desarrollo para variedad de clientes, brindando soporte a desarrollo y soluciones a necesidades puntuales.
-        </p>
-      </li>
-    </ol>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Competencias</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
+  <div class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark antialiased min-h-screen">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+      <div class="layout-container flex h-full grow flex-col">
+        <main class="flex-1 py-12 md:py-20">
+          <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4">
+            <!-- Header -->
+            <header class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div 
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 flex-shrink-0" 
+                style='background-image: url("/jared.jpeg");'
+              ></div>
+              <div class="flex flex-col text-center md:text-left items-center md:items-start gap-4">
+                <div>
+                  <h1 class="text-text-primary-light dark:text-white text-4xl md:text-5xl font-extrabold tracking-tighter">
+                    Jared Wesley Vargas Cortes
+                  </h1>
+                  <p class="text-primary dark:text-blue-400 text-lg md:text-xl font-medium mt-1">
+                    Desarrollador Full Stack
+                  </p>
+                </div>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark max-w-xl text-base md:text-lg">
+                  Desarrollador full-stack apasionado y altamente competente que puede llevar a cabo proyectos desde la concepción hasta la implementación, garantizando que tanto el frontend como el backend funcionen en perfecta armonía para ofrecer resultados excepcionales.
+                </p>
+                <button 
+                  class="group flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-blue-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-blue-600 transition-all duration-300 ease-in-out"
+                  @click="downloadCV"
+                >
+                  <span class="material-symbols-outlined !text-xl transition-transform duration-300 group-hover:-translate-y-1.5">download</span>
+                  <span class="ml-2 truncate transition-transform duration-300 group-hover:-translate-y-1.5">Descargar CV</span>
+                </button>
+              </div>
+            </header>
 
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-      Lenguajes de programación y tegnologias:
-    </h2>
-    <div class="gap-10 sm:grid sm:grid-cols-2">
-      <div>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            JavaScript
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 95%"
-              ></div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <!-- Main Content -->
+              <div class="lg:col-span-2 flex flex-col gap-10">
+                <!-- Professional Summary -->
+                <section class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-6 md:p-8">
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-4 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">person</span>
+                    Perfil Profesional
+                  </h2>
+                  <p class="text-text-secondary-light dark:text-text-secondary-dark text-base leading-relaxed mb-4">
+                    Con una sólida experiencia en el desarrollo de aplicaciones web, he adquirido conocimientos profundos en una amplia variedad de tecnologías clave que abarcan tanto el lado del servidor como el cliente.
+                  </p>
+                  
+                  <h3 class="text-lg font-semibold text-text-primary-light dark:text-white mt-4 mb-2">
+                    Desarrollo Frontend:
+                  </h3>
+                  <ul class="list-disc pl-5 text-text-secondary-light dark:text-text-secondary-dark text-sm space-y-2 mb-4">
+                    <li>Uso experto de Vue para crear interfaces de usuario dinámicas y atractivas.</li>
+                    <li>Competencia en el desarrollo de API RESTful para garantizar una comunicación eficiente entre el frontend y el backend.</li>
+                    <li>Habilidad para crear interfaces atractivas y funcionales mediante la combinación de socket.io, JavaScript, CSS, HTML, vue, bulma, tailwind y Bootstrap.</li>
+                  </ul>
+
+                  <h3 class="text-lg font-semibold text-text-primary-light dark:text-white mt-4 mb-2">
+                    Desarrollo Backend:
+                  </h3>
+                  <ul class="list-disc pl-5 text-text-secondary-light dark:text-text-secondary-dark text-sm space-y-2 mb-4">
+                    <li>Amplia experiencia en Node.js y express para la creación de servidores robustos y escalables.</li>
+                    <li>Competencia en el diseño e implementación de microservicios, lo que permite la construcción de sistemas altamente modulares y flexibles.</li>
+                    <li>Conocimiento profundo de bases de datos, incluyendo MongoDB, PostgreSQL y SQL, para gestionar eficientemente los datos de la aplicación.</li>
+                  </ul>
+
+                  <h3 class="text-lg font-semibold text-text-primary-light dark:text-white mt-4 mb-2">
+                    Herramientas y Gestión:
+                  </h3>
+                  <ul class="list-disc pl-5 text-text-secondary-light dark:text-text-secondary-dark text-sm space-y-2">
+                    <li>Uso eficiente de marcos NPM y PM2 para gestionar dependencias y mejorar la eficiencia del flujo de trabajo.</li>
+                    <li>Experiencia en la administración de sistemas Avaya, incluyendo Control Manager, Workspaces y Site Administrator, entre otros.</li>
+                    <li>He tenido la oportunidad de trabajar en una variedad de proyectos, desde la creación de API RESTful simples hasta el desarrollo de aplicaciones de una sola página altamente interactivas.</li>
+                  </ul>
+                </section>
+
+                <!-- Work Experience -->
+                <section>
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">work</span>
+                    Experiencia Laboral
+                  </h2>
+                  <div class="space-y-8">
+                    <div class="flex gap-x-4">
+                      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-border-light dark:bg-border-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">business_center</span>
+                      </div>
+                      <div>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                          <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Desarrollador Full Stack</h3>
+                          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 sm:mt-0">Mayo 2022 - Presente</p>
+                        </div>
+                        <p class="text-base text-text-secondary-light dark:text-text-secondary-dark mt-1">FreeLance</p>
+                        <ul class="list-disc pl-5 mt-3 text-text-secondary-light dark:text-text-secondary-dark text-sm space-y-2">
+                          <li>Desarrollo para variedad de clientes, brindando soporte a desarrollo y soluciones a necesidades puntuales.</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-x-4">
+                      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-border-light dark:bg-border-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">business_center</span>
+                      </div>
+                      <div>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                          <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Desarrollador</h3>
+                          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 sm:mt-0">Mayo 2021 - Mayo 2022</p>
+                        </div>
+                        <p class="text-base text-text-secondary-light dark:text-text-secondary-dark mt-1">Bercont</p>
+                        <ul class="list-disc pl-5 mt-3 text-text-secondary-light dark:text-text-secondary-dark text-sm space-y-2">
+                          <li>Desarrollo con node.js y MongoDB, para brindar aplicaciones que permitan facilitar soluciones a clientes.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Projects -->
+                <section>
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">lightbulb</span>
+                    Proyectos
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group">
+                      <img 
+                        alt="Fintech App Screenshot" 
+                        class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAFw56GkYEAJbd1fWsLwQp-VSkZu1ysi31mKJzOKlO3TufSI1lnJDhY2Z1MAJyFGY_EJ5HElf_RmEreYOTpal6vy3X6nIG6AI0NmMusWvUvWYXqr-q_9TGtgjrOn98VBxqxyRML6RYPojnp3z3Oz7BfAtn9TId3TKQsXvPqvAAB77t0lft8yjiWPuvmzERrkHj8hg96qcMBwJC4kga2DCI_u4n_UEfZHjiftD18dHd2X3sN-csUha0F9igf4-Y_X1PQBiL_4aEcKQ"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Fintech App Redesign</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Rol: Lead Designer</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2">Simplified user flows and UI, leading to a 25% increase in daily active users.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Figma</span>
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">User Research</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group">
+                      <img 
+                        alt="Analytics Dashboard Screenshot" 
+                        class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9X-MJCG8eRxRKckr15osoo1GFfxvBmdLVNQazpqxqqzSl9vSYHpjHy2wlE7pa6AqMRD7drOQrOTmvM87joxk4IlLoScRrLOlUbZ5kOAT9DTo3o2rSTktwc96CWkqJhSjEaJbcCfwDPmgno4VG2CJCLS-kt1YGAeiwJNpOyPUck_xydQfZwErYvKW9XkwNoq21by-rz453w5uzI5QW9P5-HKK-k1B_mux7hwsjq-x79MfmT0y_iFcPGJnqv6Pul6CoHlmWcyWhSJY"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Analytics Dashboard</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Rol: UX/UI Designer</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2">Created a data visualization platform that reduced report generation time by 50%.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Sketch</span>
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Prototyping</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft overflow-hidden group md:col-span-2">
+                      <img 
+                        alt="E-commerce Platform Screenshot" 
+                        class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrYinjTLDMXMiHf3vKutu3Blwydi778JtJNf6Iz4QoEhYvpzPmcUm1jolDWQa8T9HSmnjvL1cH68_QmUsRAcJcJPrtYULhYiJoNP3AP-9Vn4Is6jZSFb3PDXJVLxnutsFviCTS0OP2FpYgN7D0HONG08tgeEpg7Ira57SrGZEHN5PiWlL9aTO53p0x01GO7whC7TKS3Zj_sMx0x1vHBnc85YvuNEady0L2lBUQd61ul9p93ZvOhW9775DgE9n_Llrh5c82XPS9ZO0"
+                      />
+                      <div class="p-4">
+                        <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">E-commerce Platform</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Rol: Product Designer</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2">Designed a new checkout experience that decreased cart abandonment by 15%.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Adobe XD</span>
+                          <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">A/B Testing</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Education -->
+                <section>
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">school</span>
+                    Formación
+                  </h2>
+                  <div class="space-y-8">
+                    <div class="flex gap-x-4">
+                      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-border-light dark:bg-border-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">school</span>
+                      </div>
+                      <div>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                          <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Técnico En Desarrollo De Software</h3>
+                          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 sm:mt-0">Junio 2021</p>
+                        </div>
+                        <p class="text-base text-text-secondary-light dark:text-text-secondary-dark mt-1">Aprendizaje en las Bases del desarrollo de software</p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-x-4">
+                      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-border-light dark:bg-border-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">school</span>
+                      </div>
+                      <div>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                          <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Bachiller</h3>
+                          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 sm:mt-0">Noviembre 2019</p>
+                        </div>
+                        <p class="text-base text-text-secondary-light dark:text-text-secondary-dark mt-1">Educación Media</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Internships -->
+                <section>
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">work_history</span>
+                    Prácticas Laborales
+                  </h2>
+                  <div class="space-y-8">
+                    <div class="flex gap-x-4">
+                      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-border-light dark:bg-border-dark flex items-center justify-center">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">business_center</span>
+                      </div>
+                      <div>
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center">
+                          <h3 class="text-lg font-semibold text-text-primary-light dark:text-white">Bercont</h3>
+                          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 sm:mt-0">Enero 2021 - Mayo 2021</p>
+                        </div>
+                        <p class="text-base text-text-secondary-light dark:text-text-secondary-dark mt-1">Apoyo en labores varias y ayuda a un ingeniero encargado del software</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- Sidebar -->
+              <div class="lg:col-span-1 flex flex-col gap-10">
+                <!-- Contact Information -->
+                <section class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-6">
+                  <h3 class="text-lg font-bold text-text-primary-light dark:text-white mb-4">Información de Contacto</h3>
+                  <ul class="space-y-4 text-sm">
+                    <li class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-xl">mail</span>
+                      <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400" href="mailto:jaredwesley27@hotmail.com">jaredwesley27@hotmail.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-xl">phone</span>
+                      <span class="text-text-secondary-light dark:text-text-secondary-dark">+573229266046</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-xl">location_on</span>
+                      <span class="text-text-secondary-light dark:text-text-secondary-dark">Bogotá, Colombia</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-xl">link</span>
+                      <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400" href="https://lollool2.github.io/-CV.com/" target="_blank">Página Web</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg aria-hidden="true" class="w-5 h-5 text-primary dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
+                      </svg>
+                      <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400" href="https://github.com/JaredSoftware" target="_blank">GitHub</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                      <svg aria-hidden="true" class="w-5 h-5 text-primary dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                      </svg>
+                      <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400" href="https://www.linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8" target="_blank">LinkedIn</a>
+                    </li>
+                  </ul>
+                </section>
+
+                <!-- Skills -->
+                <section>
+                  <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary dark:text-blue-400 !text-3xl">psychology</span>
+                    Competencias
+                  </h2>
+                  <div class="space-y-6">
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-4">
+                      <h4 class="font-semibold text-text-primary-light dark:text-white mb-3">Lenguajes y Frameworks</h4>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">JavaScript</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Node.js</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Vue</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Nuxt.js</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">React</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Next.js</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Sails.js</span>
+                      </div>
+                    </div>
+
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-4">
+                      <h4 class="font-semibold text-text-primary-light dark:text-white mb-3">Bases de Datos</h4>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">MongoDB</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">PostgreSQL</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">MySQL</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">SQL</span>
+                      </div>
+                    </div>
+
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-4">
+                      <h4 class="font-semibold text-text-primary-light dark:text-white mb-3">Herramientas y Estilos</h4>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Tailwind CSS</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Bootstrap</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Sass</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Git</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">PM2</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Ubuntu</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">CentOS</span>
+                      </div>
+                    </div>
+
+                    <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-4">
+                      <h4 class="font-semibold text-text-primary-light dark:text-white mb-3">Aptitudes</h4>
+                      <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Comunicación</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Pensamiento Crítico</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Creatividad</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Trabajo en Equipo</span>
+                        <span class="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-sm font-medium px-3 py-1.5 rounded-lg">Atención al Detalle</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-6">
+                  <h3 class="text-lg font-bold text-text-primary-light dark:text-white mb-4">Idiomas</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex justify-between mb-2">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-white">Inglés</span>
+                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark">7.5/10</span>
+                      </div>
+                      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500" style="width: 75%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Hobbies -->
+                <section class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft p-6">
+                  <h3 class="text-lg font-bold text-text-primary-light dark:text-white mb-4">Pasatiempos e Intereses</h3>
+                  <div class="space-y-2">
+                    <div class="block w-full px-4 py-2 text-white bg-blue-700 border-b border-gray-200 rounded-t-lg dark:bg-gray-800 dark:border-gray-600">
+                      Grabación y producción musical
+                    </div>
+                    <div class="block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white rounded-b-lg">
+                      Aprendizaje de lenguajes de Software Variado para cualquier situación
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >9.5</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Node.js
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 90%"
-              ></div>
+          </div>
+        </main>
+
+        <footer class="bg-card-light dark:bg-card-dark border-t border-border-light dark:border-border-dark mt-12">
+          <div class="mx-auto max-w-6xl px-4 py-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+              <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">© 2024 Jared Wesley Vargas Cortes. Todos los derechos reservados.</p>
+              <div class="flex items-center gap-4">
+                <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400 transition-colors" href="https://lollool2.github.io/-CV.com/" target="_blank">Portfolio</a>
+                <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8" target="_blank">LinkedIn</a>
+                <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-blue-400 transition-colors" href="mailto:jaredwesley27@hotmail.com">Contacto</a>
+              </div>
             </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >9.0</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            MongoDB
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 88%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.8</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Next.js
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 54%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >5.4</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Bootstrap
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Tailwind CSS
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            React
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 50%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >5.0</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Sql
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Ubuntu
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 70%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >7.0</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Pm2
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 90%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >9.0</span
-            >
-          </dd>
-        </dl>
-      </div>
-      <div>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Vue
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Nuxt.js
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 70%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >7.0</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            git
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            GitHub
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Sass
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            Sails Js
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 70%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >7.0</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            PostgreSQL
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 95%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >9.5</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            MySql
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 89%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >8.9</span
-            >
-          </dd>
-        </dl>
-        <dl class="mt-3">
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            CentOs
-          </dt>
-          <dd class="flex items-center">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 70%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >7.0</span
-            >
-          </dd>
-        </dl>
+          </div>
+        </footer>
       </div>
     </div>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Lenguajes</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-
-    <div class="gap-10 sm:grid sm:grid-cols-2">
-      <div>
-        <dl>
-          <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">
-            English
-          </dt>
-          <dd class="flex items-center mb-3">
-            <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
-              <div
-                class="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
-                style="width: 75%"
-              ></div>
-            </div>
-            <span class="text-sm font-medium text-gray-500 dark:text-gray-400"
-              >7.5</span
-            >
-          </dd>
-        </dl>
-      </div>
-      <div></div>
-    </div>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Pasatiempos e intereses</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-
-    <div
-      class="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-    >
-      <a
-        aria-current="true"
-        class="block w-full px-4 py-2 text-white bg-blue-700 border-b border-gray-200 rounded-t-lg cursor-pointer dark:bg-gray-800 dark:border-gray-600"
-      >
-        Grabacion y producción musical
-      </a>
-      <a
-        class="block w-full px-4 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
-      >
-        Aprendizaje de lengujaes de Software Variado para cualquier situación
-      </a>
-    </div>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Praticas Laborales</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-    <ol class="relative border-l border-gray-200 dark:border-gray-700">
-      <li class="mb-10 ml-4">
-        <div
-          class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
-        ></div>
-        <time
-          class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-          >Enero 2021 | Mayo 2021</time
-        >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Bercont
-        </h3>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-          Apoyo en labores varias y ayuda a un ingeniero encargado del software
-        </p>
-      </li>
-    </ol>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Refencias Familiares</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-    <div class="max-w-800 mx-auto p-4">
-      <h1 class="text-2xl font-bold mb-4">Hermana</h1>
-      <div class="bg-gray-200 p-4 rounded">
-        <p class="font-bold">Vargas, Geraldine:</p>
-        <p>Vargas Cortes, Geraldine Dayanna</p>
-      </div>
-      <div class="bg-gray-200 p-4 mt-4 rounded">
-        <p class="font-bold">Título:</p>
-        <p>Contadora</p>
-      </div>
-    </div>
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Refencias Personales</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-  </div>
-  <div
-    class="mt-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-  >
-    <h3 class="font-bold text-2xl text-blue-700">Aptitudes</h3>
-    <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
-
-    <ul
-      class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400"
-    >
-      <li>
-        List item one
-        <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-          <li>Habilidades de comunicación</li>
-          <li>Pensamiento crítico</li>
-          <li>Creatividad</li>
-          <li>Curiosidad y capacidad de aprendizaje.</li>
-          <li>Trabajo en equipo</li>
-          <li>Atención al Detalle</li>
-          <li>Paciencia y perseverancia</li>
-          <li>Habilidades técnicas</li>
-        </ol>
-      </li>
-    </ul>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const downloadCV = () => {
+  // Abrir la página del CV ATS donde se puede generar el PDF
+  window.open('/cv-ats', '_blank')
+}
 </script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
