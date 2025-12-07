@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     port: 3000,
   },
   router: {
-    base: "/dist/",
+    base: "/cv/",
   },
   generate: {
     subFolders: true,

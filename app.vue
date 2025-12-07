@@ -12,12 +12,12 @@ const { locale } = useI18n()
 
 const showThemeToggle = computed(() => {
   // No mostrar el toggle en la página CV ATS
-  return route.path !== '/cv-ats' && route.path !== '/dist/cv-ats'
+  return route.path !== '/cv-ats' && !route.path.includes('/cv-ats')
 })
 
 const showLanguageSelector = computed(() => {
   // No mostrar el selector de idioma en la página CV ATS
-  return route.path !== '/cv-ats' && route.path !== '/dist/cv-ats'
+  return route.path !== '/cv-ats' && !route.path.includes('/cv-ats')
 })
 
 watch(locale, (newLocale) => {
