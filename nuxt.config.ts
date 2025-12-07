@@ -10,6 +10,11 @@ export default defineNuxtConfig({
   generate: {
     subFolders: true,
   },
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
+  },
   modules: [
     '@nuxtjs/i18n'
   ],
@@ -19,18 +24,15 @@ export default defineNuxtConfig({
       {
         code: 'es',
         iso: 'es-CO',
-        name: 'Español',
-        file: 'es.json'
+        name: 'Español'
       },
       {
         code: 'en',
         iso: 'en-US',
-        name: 'English',
-        file: 'en.json'
+        name: 'English'
       }
     ],
-    lazy: true,
-    langDir: 'locales',
+    lazy: false,
     defaultLocale: 'es',
     strategy: 'no_prefix',
     detectBrowserLanguage: {
@@ -38,6 +40,11 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
       alwaysRedirect: false
-    }
+    },
+    compilation: {
+      strictMessage: false,
+      jit: false
+    },
+    vueI18n: './i18n.config.ts'
   }
 });

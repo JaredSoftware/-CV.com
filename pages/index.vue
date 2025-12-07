@@ -406,8 +406,15 @@ const extractStrings = (items) => {
 // Función para obtener arrays de traducciones de forma segura
 const getTranslationArray = (key) => {
   try {
-    // Intentar obtener directamente del objeto de mensajes
-    const localeMessages = messages.value[locale.value]
+    // Primero intentar usar tm() que es el método recomendado
+    const result = tm(key)
+    
+    if (Array.isArray(result)) {
+      return extractStrings(result)
+    }
+    
+    // Fallback: intentar obtener directamente del objeto de mensajes
+    const localeMessages = messages.value?.[locale.value]
     if (localeMessages) {
       const keys = key.split('.')
       let value = localeMessages
@@ -425,12 +432,7 @@ const getTranslationArray = (key) => {
       }
     }
     
-    // Fallback: usar tm()
-    const result = tm(key)
-    if (Array.isArray(result)) {
-      return extractStrings(result)
-    }
-    
+    console.warn(`Translation array not found for key: ${key}`)
     return []
   } catch (e) {
     console.error('Error loading translation:', key, e)
