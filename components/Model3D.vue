@@ -109,25 +109,26 @@ const initThreeJS = async () => {
     
     const loader = new GLTFLoader(loadingManager)
     
-    // Construir la URL completa del modelo
+    // Construir la URL completa del modelo - usar directamente la prop que ya viene con el path correcto
     let modelUrl = props.modelPath
-    // Si la ruta no comienza con http, asegurarse de que tenga el path correcto
+    
+    // Si la ruta no comienza con http/https, construir la URL completa
     if (!modelUrl.startsWith('http')) {
-      // Si no comienza con /, agregar el base path
-      if (!modelUrl.startsWith('/')) {
-        const basePath = window.location.pathname.split('/').slice(0, -1).join('/') || '/cv'
-        modelUrl = `${basePath}/${modelUrl}`.replace(/\/+/g, '/')
+      // Si ya tiene el path completo con /cv/, usarlo directamente
+      if (modelUrl.startsWith('/cv/')) {
+        // URL relativa correcta
+        modelUrl = modelUrl
+      } else if (modelUrl.startsWith('/')) {
+        // Si comienza con / pero no tiene /cv/, agregarlo
+        modelUrl = `/cv${modelUrl}`
       } else {
-        // Si ya comienza con /, asegurarse de que tenga el base path correcto
-        // En GitHub Pages, el base path es /cv/
-        if (!modelUrl.startsWith('/cv/')) {
-          // Asegurar que tenga la barra diagonal correcta
-          modelUrl = `/cv${modelUrl.startsWith('/') ? '' : '/'}${modelUrl.replace(/^\//, '')}`
-        }
+        // Si no comienza con /, agregar el base path completo
+        modelUrl = `/cv/${modelUrl}`
       }
     }
     
     console.log('Loading model from URL:', modelUrl)
+    console.log('Model path prop:', props.modelPath)
     
     loader.load(
       modelUrl,
@@ -172,14 +173,21 @@ const initThreeJS = async () => {
       },
       (progress) => {
         // Callback de progreso opcional
-        if (progress.lengthComputable) {
+        if (progress && progress.lengthComputable) {
           const percentage = (progress.loaded / progress.total) * 100
           console.log(`Loading model: ${percentage.toFixed(0)}%`)
+        } else if (typeof progress === 'number') {
+          console.log(`Loading model: ${progress}%`)
         }
       },
       (error) => {
         console.error('Error loading GLB model:', error)
         console.error('Model URL attempted:', modelUrl)
+        console.error('Full error details:', {
+          message: error?.message,
+          stack: error?.stack,
+          url: modelUrl
+        })
         isLoading.value = false
       }
     )
