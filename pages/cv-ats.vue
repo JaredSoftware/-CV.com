@@ -6,106 +6,98 @@
         @click="downloadPDF"
         style="padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"
       >
-        📥 Descargar PDF ATS
+        📥 {{ $t('cvAts.downloadPDF') }}
       </button>
     </div>
     
     <div id="cv-ats" class="cv-ats-container">
       <!-- Header -->
       <header class="cv-header">
-        <h1 class="cv-name">Jared Wesley Vargas Cortes</h1>
+        <h1 class="cv-name">{{ $t('name') }}</h1>
         <div class="cv-contact">
-          <span>Bogotá, Colombia</span> | 
-          <span>jaredwesley27@hotmail.com</span> | 
-          <span>+57 322 926 6046</span> | 
-          <span>GitHub: github.com/JaredSoftware</span> | 
-          <span>LinkedIn: linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8</span> | 
-          <span>Portfolio: lollool2.github.io/-CV.com/</span>
+          <span>{{ $t('cvAts.contact.location') }}</span> | 
+          <span>{{ $t('cvAts.contact.email') }}</span> | 
+          <span>{{ $t('cvAts.contact.phone') }}</span> | 
+          <span>{{ $t('cvAts.contact.github') }}</span> | 
+          <span>{{ $t('cvAts.contact.linkedin') }}</span> | 
+          <span>{{ $t('cvAts.contact.portfolio') }}</span>
         </div>
       </header>
 
       <!-- Professional Summary -->
       <section class="cv-section">
-        <h2 class="cv-section-title">RESUMEN PROFESIONAL</h2>
+        <h2 class="cv-section-title">{{ $t('cvAts.professionalSummary.title') }}</h2>
         <p class="cv-text">
-          Desarrollador full-stack con más de 3 años de experiencia en Node.js, Express, MongoDB, PostgreSQL, Vue.js, Nuxt.js, React y microservicios. Especializado en desarrollo de APIs RESTful, aplicaciones escalables y optimización de rendimiento. Experiencia en Docker, Git, CI/CD, arquitectura de microservicios y metodologías ágiles.
+          {{ $t('cvAts.professionalSummary.content') }}
         </p>
       </section>
 
       <!-- Technical Skills -->
       <section class="cv-section">
-        <h2 class="cv-section-title">HABILIDADES TÉCNICAS</h2>
+        <h2 class="cv-section-title">{{ $t('cvAts.technicalSkills.title') }}</h2>
         <div class="cv-skills">
-          <p><strong>Lenguajes:</strong> JavaScript, TypeScript, SQL</p>
-          <p><strong>Frameworks y Librerías:</strong> Node.js, Express, Vue.js, Nuxt.js, React, Next.js, Sails.js</p>
-          <p><strong>Bases de Datos:</strong> PostgreSQL, MySQL, MongoDB, SQL</p>
-          <p><strong>Frontend:</strong> HTML5, CSS3, Tailwind CSS, Bootstrap, Sass, Socket.io</p>
-          <p><strong>DevOps y Herramientas:</strong> Docker, PM2, Git, GitHub, CI/CD, NPM</p>
-          <p><strong>Arquitectura:</strong> Microservicios, API REST, WebSockets, Arquitectura de software</p>
-          <p><strong>Sistemas Operativos:</strong> Ubuntu, CentOS, Linux</p>
-          <p><strong>Metodologías:</strong> Scrum, Agile, Desarrollo ágil</p>
-          <p><strong>Testing:</strong> Unit Testing, Pruebas de software</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.languages') }}</strong> {{ $t('cvAts.technicalSkills.languagesList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.frameworks') }}</strong> {{ $t('cvAts.technicalSkills.frameworksList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.databases') }}</strong> {{ $t('cvAts.technicalSkills.databasesList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.frontend') }}</strong> {{ $t('cvAts.technicalSkills.frontendList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.devops') }}</strong> {{ $t('cvAts.technicalSkills.devopsList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.architecture') }}</strong> {{ $t('cvAts.technicalSkills.architectureList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.os') }}</strong> {{ $t('cvAts.technicalSkills.osList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.methodologies') }}</strong> {{ $t('cvAts.technicalSkills.methodologiesList') }}</p>
+          <p><strong>{{ $t('cvAts.technicalSkills.testing') }}</strong> {{ $t('cvAts.technicalSkills.testingList') }}</p>
         </div>
       </section>
 
       <!-- Work Experience -->
       <section class="cv-section">
-        <h2 class="cv-section-title">EXPERIENCIA LABORAL</h2>
+        <h2 class="cv-section-title">{{ $t('cvAts.workExperience.title') }}</h2>
         
         <div class="cv-job">
           <div class="cv-job-header">
-            <strong>Desarrollador Full Stack</strong> — FreeLance
+            <strong>{{ $t('cvAts.workExperience.freelance.position') }}</strong> — {{ $t('cvAts.workExperience.freelance.company') }}
           </div>
-          <div class="cv-job-date">Mayo 2022 - Presente</div>
+          <div class="cv-job-date">{{ $t('cvAts.workExperience.freelance.period') }}</div>
           <ul class="cv-job-list">
-            <li>Desarrollo de aplicaciones web full-stack para clientes diversos, implementando APIs RESTful con Node.js y Express</li>
-            <li>Desarrollo de interfaces responsivas con Vue.js, Nuxt.js, React y Tailwind CSS</li>
-            <li>Gestión y optimización de bases de datos PostgreSQL y MongoDB</li>
-            <li>Tecnologías: Node.js, Express, Vue.js, Nuxt.js, React, PostgreSQL, MongoDB, Docker, Git</li>
+            <li v-for="(point, index) in freelancePoints" :key="index">{{ point }}</li>
           </ul>
         </div>
 
         <div class="cv-job">
           <div class="cv-job-header">
-            <strong>Desarrollador</strong> — Bercont
+            <strong>{{ $t('cvAts.workExperience.bercontDeveloper.position') }}</strong> — {{ $t('cvAts.workExperience.bercontDeveloper.company') }}
           </div>
-          <div class="cv-job-date">Mayo 2021 - Mayo 2022</div>
+          <div class="cv-job-date">{{ $t('cvAts.workExperience.bercontDeveloper.period') }}</div>
           <ul class="cv-job-list">
-            <li>Desarrollo de aplicaciones web con Node.js y MongoDB para clientes empresariales</li>
-            <li>Implementación de arquitectura de microservicios y APIs eficientes</li>
-            <li>Colaboración en equipos ágiles para entrega de productos de calidad</li>
-            <li>Tecnologías: Node.js, MongoDB, Express, JavaScript, Git, PM2</li>
+            <li v-for="(point, index) in bercontDeveloperPoints" :key="index">{{ point }}</li>
           </ul>
         </div>
 
         <div class="cv-job">
           <div class="cv-job-header">
-            <strong>Prácticas Laborales</strong> — Bercont
+            <strong>{{ $t('cvAts.workExperience.internship.position') }}</strong> — {{ $t('cvAts.workExperience.internship.company') }}
           </div>
-          <div class="cv-job-date">Enero 2021 - Mayo 2021</div>
+          <div class="cv-job-date">{{ $t('cvAts.workExperience.internship.period') }}</div>
           <ul class="cv-job-list">
-            <li>Apoyo en desarrollo de software bajo supervisión de ingeniero senior</li>
-            <li>Participación en proyectos web y aplicación de mejores prácticas</li>
-            <li>Tecnologías: Node.js, JavaScript, HTML, CSS, Git</li>
+            <li v-for="(point, index) in internshipPoints" :key="index">{{ point }}</li>
           </ul>
         </div>
       </section>
 
       <!-- Education -->
       <section class="cv-section">
-        <h2 class="cv-section-title">EDUCACIÓN</h2>
+        <h2 class="cv-section-title">{{ $t('cvAts.education.title') }}</h2>
         <div class="cv-education">
-          <p><strong>Técnico En Desarrollo De Software</strong> — Institución Educativa — Junio 2021</p>
-          <p><strong>Bachiller</strong> — Educación Media — Noviembre 2019</p>
+          <p>{{ $t('cvAts.education.technician') }}</p>
+          <p>{{ $t('cvAts.education.highschool') }}</p>
         </div>
       </section>
 
       <!-- Additional Skills & Languages -->
       <section class="cv-section">
-        <h2 class="cv-section-title">APTITUDES E IDIOMAS</h2>
+        <h2 class="cv-section-title">{{ $t('cvAts.aptitudesAndLanguages.title') }}</h2>
         <div class="cv-text">
-          <p><strong>Aptitudes:</strong> Comunicación, pensamiento crítico, trabajo en equipo, atención al detalle, aprendizaje continuo.</p>
-          <p><strong>Idiomas:</strong> Español (Nativo), Inglés (Intermedio - 7.5/10)</p>
+          <p><strong>{{ $t('cvAts.aptitudesAndLanguages.aptitudes') }}</strong> {{ $t('cvAts.aptitudesAndLanguages.aptitudesList') }}</p>
+          <p><strong>{{ $t('cvAts.aptitudesAndLanguages.languages') }}</strong> {{ $t('cvAts.aptitudesAndLanguages.languagesList') }}</p>
         </div>
       </section>
     </div>
@@ -113,14 +105,83 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 const { generatePDF } = usePDFGenerator()
+const { t, tm, messages, locale } = useI18n()
+
+// Función para extraer strings de arrays de traducciones
+const extractStrings = (items) => {
+  if (!items || !Array.isArray(items)) {
+    return []
+  }
+  
+  return items.map(item => {
+    if (typeof item === 'string') {
+      return item
+    }
+    if (item && typeof item === 'object') {
+      if (item.body && typeof item.body === 'object' && typeof item.body.static === 'string') {
+        return item.body.static
+      }
+      if (typeof item.static === 'string') {
+        return item.static
+      }
+      if (typeof item.source === 'string') {
+        return item.source
+      }
+    }
+    return ''
+  }).filter(item => item && typeof item === 'string' && item.length > 0)
+}
+
+// Función para obtener arrays de traducciones
+const getTranslationArray = (key) => {
+  try {
+    const result = tm(key)
+    if (Array.isArray(result)) {
+      return extractStrings(result)
+    }
+    const localeMessages = messages.value?.[locale.value]
+    if (localeMessages) {
+      const keys = key.split('.')
+      let value = localeMessages
+      for (const k of keys) {
+        if (value && typeof value === 'object' && k in value) {
+          value = value[k]
+        } else {
+          value = null
+          break
+        }
+      }
+      if (Array.isArray(value)) {
+        return extractStrings(value)
+      }
+    }
+    return []
+  } catch (e) {
+    console.error('Error loading translation:', key, e)
+    return []
+  }
+}
+
+const freelancePoints = computed(() => getTranslationArray('cvAts.workExperience.freelance.points'))
+const bercontDeveloperPoints = computed(() => getTranslationArray('cvAts.workExperience.bercontDeveloper.points'))
+const internshipPoints = computed(() => getTranslationArray('cvAts.workExperience.internship.points'))
 
 const downloadPDF = async () => {
   try {
-    await generatePDF('cv-ats', 'CV_Jared_Wesley_Vargas_Cortes_ATS.pdf')
+    const fileName = locale.value === 'es' 
+      ? 'CV_Jared_Wesley_Vargas_Cortes_ATS.pdf'
+      : 'CV_Jared_Wesley_Vargas_Cortes_ATS.pdf'
+    await generatePDF('cv-ats', fileName)
   } catch (error) {
     console.error('Error al generar PDF:', error)
-    alert('Error al generar el PDF. Por favor, intenta usar la función de imprimir del navegador (Ctrl+P).')
+    const errorMessage = locale.value === 'es'
+      ? 'Error al generar el PDF. Por favor, intenta usar la función de imprimir del navegador (Ctrl+P).'
+      : 'Error generating PDF. Please try using the browser print function (Ctrl+P).'
+    alert(errorMessage)
   }
 }
 </script>

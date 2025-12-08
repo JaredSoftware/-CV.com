@@ -129,6 +129,89 @@
   },
   "languageSelector": {
     "selectLanguage": "Select language"
+  },
+  "cvAts": {
+    "downloadPDF": "Download PDF ATS",
+    "professionalSummary": {
+      "title": "PROFESSIONAL SUMMARY",
+      "content": "Full-stack developer with more than 3 years of experience in Node.js, Express, MongoDB, PostgreSQL, Vue.js, Nuxt.js, React and microservices. Specialized in RESTful API development, scalable applications and performance optimization. Experience in Docker, Git, CI/CD, microservices architecture and agile methodologies."
+    },
+    "technicalSkills": {
+      "title": "TECHNICAL SKILLS",
+      "languages": "Languages:",
+      "languagesList": "JavaScript, TypeScript, SQL",
+      "frameworks": "Frameworks and Libraries:",
+      "frameworksList": "Node.js, Express, Vue.js, Nuxt.js, React, Next.js, Sails.js",
+      "databases": "Databases:",
+      "databasesList": "PostgreSQL, MySQL, MongoDB, SQL",
+      "frontend": "Frontend:",
+      "frontendList": "HTML5, CSS3, Tailwind CSS, Bootstrap, Sass, Socket.io",
+      "devops": "DevOps and Tools:",
+      "devopsList": "Docker, PM2, Git, GitHub, CI/CD, NPM",
+      "architecture": "Architecture:",
+      "architectureList": "Microservices, REST API, WebSockets, Software architecture",
+      "os": "Operating Systems:",
+      "osList": "Ubuntu, CentOS, Linux",
+      "methodologies": "Methodologies:",
+      "methodologiesList": "Scrum, Agile, Agile development",
+      "testing": "Testing:",
+      "testingList": "Unit Testing, Software testing"
+    },
+    "workExperience": {
+      "title": "WORK EXPERIENCE",
+      "freelance": {
+        "position": "Full Stack Developer",
+        "company": "Freelance",
+        "period": "May 2022 - Present",
+        "points": [
+          "Full-stack web application development for diverse clients, implementing RESTful APIs with Node.js and Express",
+          "Responsive interface development with Vue.js, Nuxt.js, React and Tailwind CSS",
+          "PostgreSQL and MongoDB database management and optimization",
+          "Technologies: Node.js, Express, Vue.js, Nuxt.js, React, PostgreSQL, MongoDB, Docker, Git"
+        ]
+      },
+      "bercontDeveloper": {
+        "position": "Developer",
+        "company": "Bercont",
+        "period": "May 2021 - May 2022",
+        "points": [
+          "Web application development with Node.js and MongoDB for enterprise clients",
+          "Microservices architecture and efficient API implementation",
+          "Collaboration in agile teams for quality product delivery",
+          "Technologies: Node.js, MongoDB, Express, JavaScript, Git, PM2"
+        ]
+      },
+      "internship": {
+        "position": "Internship",
+        "company": "Bercont",
+        "period": "January 2021 - May 2021",
+        "points": [
+          "Software development support under senior engineer supervision",
+          "Participation in web projects and application of best practices",
+          "Technologies: Node.js, JavaScript, HTML, CSS, Git"
+        ]
+      }
+    },
+    "education": {
+      "title": "EDUCATION",
+      "technician": "Software Development Technician — Educational Institution — June 2021",
+      "highschool": "High School — Secondary Education — November 2019"
+    },
+    "aptitudesAndLanguages": {
+      "title": "SKILLS AND LANGUAGES",
+      "aptitudes": "Skills:",
+      "aptitudesList": "Communication, critical thinking, teamwork, attention to detail, continuous learning.",
+      "languages": "Languages:",
+      "languagesList": "Spanish (Native), English (Intermediate - 7.5/10)"
+    },
+    "contact": {
+      "location": "Bogotá, Colombia",
+      "email": "jaredwesley27@hotmail.com",
+      "phone": "+57 322 926 6046",
+      "github": "GitHub: github.com/JaredSoftware",
+      "linkedin": "LinkedIn: linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8",
+      "portfolio": "Portfolio: lollool2.github.io/-CV.com/"
+    }
   }
 }
 

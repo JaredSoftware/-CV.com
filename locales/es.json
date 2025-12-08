@@ -129,6 +129,89 @@
   },
   "languageSelector": {
     "selectLanguage": "Seleccionar idioma"
+  },
+  "cvAts": {
+    "downloadPDF": "Descargar PDF ATS",
+    "professionalSummary": {
+      "title": "RESUMEN PROFESIONAL",
+      "content": "Desarrollador full-stack con más de 3 años de experiencia en Node.js, Express, MongoDB, PostgreSQL, Vue.js, Nuxt.js, React y microservicios. Especializado en desarrollo de APIs RESTful, aplicaciones escalables y optimización de rendimiento. Experiencia en Docker, Git, CI/CD, arquitectura de microservicios y metodologías ágiles."
+    },
+    "technicalSkills": {
+      "title": "HABILIDADES TÉCNICAS",
+      "languages": "Lenguajes:",
+      "languagesList": "JavaScript, TypeScript, SQL",
+      "frameworks": "Frameworks y Librerías:",
+      "frameworksList": "Node.js, Express, Vue.js, Nuxt.js, React, Next.js, Sails.js",
+      "databases": "Bases de Datos:",
+      "databasesList": "PostgreSQL, MySQL, MongoDB, SQL",
+      "frontend": "Frontend:",
+      "frontendList": "HTML5, CSS3, Tailwind CSS, Bootstrap, Sass, Socket.io",
+      "devops": "DevOps y Herramientas:",
+      "devopsList": "Docker, PM2, Git, GitHub, CI/CD, NPM",
+      "architecture": "Arquitectura:",
+      "architectureList": "Microservicios, API REST, WebSockets, Arquitectura de software",
+      "os": "Sistemas Operativos:",
+      "osList": "Ubuntu, CentOS, Linux",
+      "methodologies": "Metodologías:",
+      "methodologiesList": "Scrum, Agile, Desarrollo ágil",
+      "testing": "Testing:",
+      "testingList": "Unit Testing, Pruebas de software"
+    },
+    "workExperience": {
+      "title": "EXPERIENCIA LABORAL",
+      "freelance": {
+        "position": "Desarrollador Full Stack",
+        "company": "FreeLance",
+        "period": "Mayo 2022 - Presente",
+        "points": [
+          "Desarrollo de aplicaciones web full-stack para clientes diversos, implementando APIs RESTful con Node.js y Express",
+          "Desarrollo de interfaces responsivas con Vue.js, Nuxt.js, React y Tailwind CSS",
+          "Gestión y optimización de bases de datos PostgreSQL y MongoDB",
+          "Tecnologías: Node.js, Express, Vue.js, Nuxt.js, React, PostgreSQL, MongoDB, Docker, Git"
+        ]
+      },
+      "bercontDeveloper": {
+        "position": "Desarrollador",
+        "company": "Bercont",
+        "period": "Mayo 2021 - Mayo 2022",
+        "points": [
+          "Desarrollo de aplicaciones web con Node.js y MongoDB para clientes empresariales",
+          "Implementación de arquitectura de microservicios y APIs eficientes",
+          "Colaboración en equipos ágiles para entrega de productos de calidad",
+          "Tecnologías: Node.js, MongoDB, Express, JavaScript, Git, PM2"
+        ]
+      },
+      "internship": {
+        "position": "Prácticas Laborales",
+        "company": "Bercont",
+        "period": "Enero 2021 - Mayo 2021",
+        "points": [
+          "Apoyo en desarrollo de software bajo supervisión de ingeniero senior",
+          "Participación en proyectos web y aplicación de mejores prácticas",
+          "Tecnologías: Node.js, JavaScript, HTML, CSS, Git"
+        ]
+      }
+    },
+    "education": {
+      "title": "EDUCACIÓN",
+      "technician": "Técnico En Desarrollo De Software — Institución Educativa — Junio 2021",
+      "highschool": "Bachiller — Educación Media — Noviembre 2019"
+    },
+    "aptitudesAndLanguages": {
+      "title": "APTITUDES E IDIOMAS",
+      "aptitudes": "Aptitudes:",
+      "aptitudesList": "Comunicación, pensamiento crítico, trabajo en equipo, atención al detalle, aprendizaje continuo.",
+      "languages": "Idiomas:",
+      "languagesList": "Español (Nativo), Inglés (Intermedio - 7.5/10)"
+    },
+    "contact": {
+      "location": "Bogotá, Colombia",
+      "email": "jaredwesley27@hotmail.com",
+      "phone": "+57 322 926 6046",
+      "github": "GitHub: github.com/JaredSoftware",
+      "linkedin": "LinkedIn: linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8",
+      "portfolio": "Portfolio: lollool2.github.io/-CV.com/"
+    }
   }
 }
 
