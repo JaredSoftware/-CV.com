@@ -105,7 +105,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { generatePDF } = usePDFGenerator()
@@ -172,9 +172,26 @@ const internshipPoints = computed(() => getTranslationArray('cvAts.workExperienc
 
 const downloadPDF = async () => {
   try {
+    // Esperar a que Vue termine de renderizar todas las traducciones
+    await nextTick()
+    
+    // Dar tiempo adicional para que el DOM se actualice completamente
+    // Esto asegura que las traducciones estén visibles antes de capturar
+    await new Promise(resolve => setTimeout(resolve, 100))
+    
+    // Verificar que el contenido está renderizado correctamente
+    const element = document.getElementById('cv-ats')
+    if (!element) {
+      throw new Error('Elemento cv-ats no encontrado')
+    }
+    
+    // Forzar un re-render asegurando que todas las traducciones estén cargadas
+    await nextTick()
+    
     const fileName = locale.value === 'es' 
       ? 'CV_Jared_Wesley_Vargas_Cortes_ATS.pdf'
-      : 'CV_Jared_Wesley_Vargas_Cortes_ATS.pdf'
+      : 'CV_Jared_Wesley_Vargas_Cortes_ATS_English.pdf'
+    
     await generatePDF('cv-ats', fileName)
   } catch (error) {
     console.error('Error al generar PDF:', error)

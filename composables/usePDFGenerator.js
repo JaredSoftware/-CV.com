@@ -12,11 +12,27 @@ export const usePDFGenerator = () => {
         return
       }
       
+      // Esperar a que las fuentes y el contenido estén completamente cargados
+      await document.fonts.ready
+      
+      // Esperar un momento adicional para asegurar que Vue haya renderizado todo
+      await new Promise(resolve => setTimeout(resolve, 200))
+      
+      // Verificar que el contenido está visible (no está vacío)
+      const textContent = element.textContent || element.innerText
+      if (!textContent || textContent.trim().length === 0) {
+        console.warn('El elemento parece estar vacío, esperando más tiempo...')
+        await new Promise(resolve => setTimeout(resolve, 500))
+      }
+      
       // Ocultar el botón antes de generar el PDF
       const buttonContainer = document.getElementById('pdf-button')
       if (buttonContainer) {
         buttonContainer.style.display = 'none'
       }
+      
+      // Esperar un frame adicional antes de capturar
+      await new Promise(resolve => requestAnimationFrame(resolve))
       
       // Asegurar que el elemento tenga dimensiones correctas
       const rect = element.getBoundingClientRect()
@@ -30,10 +46,13 @@ export const usePDFGenerator = () => {
           quality: 0.92 
         },
         html2canvas: { 
-          scale: 1,
+          scale: 2, // Aumentar escala para mejor calidad
           useCORS: true,
           letterRendering: true,
           logging: false,
+          allowTaint: false,
+          backgroundColor: '#ffffff',
+          removeContainer: false,
           width: rect.width,
           height: rect.height,
           x: 0,
@@ -41,7 +60,16 @@ export const usePDFGenerator = () => {
           scrollX: 0,
           scrollY: 0,
           windowWidth: rect.width,
-          windowHeight: rect.height
+          windowHeight: rect.height,
+          onclone: (clonedDoc) => {
+            // Asegurar que el clon también tiene el contenido renderizado
+            const clonedElement = clonedDoc.getElementById(elementId)
+            if (clonedElement) {
+              // Forzar que los estilos estén aplicados
+              clonedElement.style.visibility = 'visible'
+              clonedElement.style.opacity = '1'
+            }
+          }
         },
         jsPDF: { 
           unit: 'mm', 
