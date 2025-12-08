@@ -1,7 +1,11 @@
 <template>
   <ClientOnly>
-    <div ref="containerRef" class="model-3d-container w-full h-64 md:h-80 flex items-center justify-center overflow-hidden rounded-lg relative">
-      <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-background-light/80 dark:bg-background-dark/80 rounded-lg">
+    <div 
+      ref="containerRef" 
+      class="model-3d-container w-full h-64 md:h-80 flex items-center justify-center overflow-hidden rounded-lg relative"
+      v-if="isMounted"
+    >
+      <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-background-light/80 dark:bg-background-dark/80 rounded-lg z-10">
         <div class="text-center">
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary dark:border-blue-400 mx-auto mb-2"></div>
           <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">Cargando modelo...</p>
@@ -36,6 +40,7 @@ const props = defineProps({
 
 const containerRef = ref(null)
 const isLoading = ref(true)
+const isMounted = ref(false)
 let scene = null
 let camera = null
 let renderer = null
@@ -44,14 +49,13 @@ let animationId = null
 let THREE = null
 let GLTFLoader = null
 let controls = null
-let isMounted = false
 let interactionTimeout = null
 let handleResize = null
 let onStartInteraction = null
 let onEndInteraction = null
 
 const initThreeJS = async () => {
-  if (!containerRef.value || !process.client || !isMounted) return
+  if (!containerRef.value || !process.client || !isMounted.value) return
   
   try {
     // Importar Three.js solo en el cliente
@@ -90,7 +94,7 @@ const initThreeJS = async () => {
     renderer.outputColorSpace = THREE.SRGBColorSpace
     
     // Añadir el canvas al DOM solo si el componente está montado
-    if (isMounted && containerRef.value && renderer.domElement) {
+    if (isMounted.value && containerRef.value && renderer.domElement) {
       try {
         containerRef.value.appendChild(renderer.domElement)
       } catch (e) {
@@ -138,7 +142,7 @@ const initThreeJS = async () => {
       modelUrl,
       (gltf) => {
         // Verificar que el componente aún está montado antes de continuar
-        if (!isMounted || !containerRef.value || !renderer || !scene || !camera) {
+        if (!isMounted.value || !containerRef.value || !renderer || !scene || !camera) {
           console.warn('Component unmounted before model could be loaded')
           isLoading.value = false
           return
@@ -167,7 +171,7 @@ const initThreeJS = async () => {
         scene.add(model)
         
         // Inicializar controles de órbita después de cargar el modelo
-        if (isMounted && renderer && renderer.domElement) {
+        if (isMounted.value && renderer && renderer.domElement) {
           const OrbitControlsClass = controlsModule.OrbitControls || controlsModule.default?.OrbitControls || controlsModule.default
           controls = new OrbitControlsClass(camera, renderer.domElement)
           controls.enableDamping = true // Suaviza el movimiento
@@ -184,7 +188,7 @@ const initThreeJS = async () => {
         isLoading.value = false
         
         // Iniciar animación solo si el componente está montado
-        if (isMounted) {
+        if (isMounted.value) {
           animate()
         }
       },
@@ -211,7 +215,7 @@ const initThreeJS = async () => {
     
     // Detectar cuando el usuario interactúa con los controles
     onStartInteraction = () => {
-      if (controls && isMounted) {
+      if (controls && isMounted.value) {
         controls.autoRotate = false
       }
       // Limpiar timeout anterior si existe
@@ -227,13 +231,13 @@ const initThreeJS = async () => {
         clearTimeout(interactionTimeout)
       }
       interactionTimeout = setTimeout(() => {
-        if (controls && props.autoRotate && isMounted) {
+        if (controls && props.autoRotate && isMounted.value) {
           controls.autoRotate = true
         }
       }, 2000)
     }
     
-    if (renderer && renderer.domElement && isMounted) {
+    if (renderer && renderer.domElement && isMounted.value) {
       renderer.domElement.addEventListener('mousedown', onStartInteraction)
       renderer.domElement.addEventListener('mouseup', onEndInteraction)
       renderer.domElement.addEventListener('wheel', onStartInteraction)
@@ -241,7 +245,7 @@ const initThreeJS = async () => {
     
     // Manejar resize
     handleResize = () => {
-      if (!containerRef.value || !camera || !renderer || !isMounted) return
+      if (!containerRef.value || !camera || !renderer || !isMounted.value) return
       
       const width = containerRef.value.clientWidth
       const height = containerRef.value.clientHeight
@@ -263,7 +267,7 @@ const initThreeJS = async () => {
 }
 
 const animate = () => {
-  if (!scene || !camera || !renderer || !isMounted) {
+  if (!scene || !camera || !renderer || !isMounted.value) {
     // Si el componente ya no está montado, cancelar la animación
     if (animationId) {
       cancelAnimationFrame(animationId)
@@ -275,28 +279,29 @@ const animate = () => {
   animationId = requestAnimationFrame(animate)
   
   // Actualizar controles (necesario para damping y rotación automática)
-  if (controls && isMounted) {
+  if (controls && isMounted.value) {
     try {
       controls.update()
     } catch (e) {
-      console.warn('Error updating controls:', e)
+      // Ignorar errores silenciosamente
     }
   }
   
   // Renderizar solo si el componente está montado
-  if (isMounted && renderer && scene && camera) {
+  if (isMounted.value && renderer && scene && camera) {
     try {
       renderer.render(scene, camera)
     } catch (e) {
-      console.warn('Error rendering scene:', e)
+      // Ignorar errores silenciosamente
     }
   }
 }
 
 const cleanup = () => {
-  isMounted = false
+  // Marcar como desmontado PRIMERO para detener todas las operaciones
+  isMounted.value = false
   
-  // Cancelar animación
+  // Cancelar animación INMEDIATAMENTE
   if (animationId) {
     cancelAnimationFrame(animationId)
     animationId = null
@@ -310,53 +315,79 @@ const cleanup = () => {
   
   // Remover event listeners del resize
   if (handleResize && process.client) {
-    window.removeEventListener('resize', handleResize)
+    try {
+      window.removeEventListener('resize', handleResize)
+    } catch (e) {
+      // Ignorar errores
+    }
     handleResize = null
   }
   
-  // Remover event listeners del renderer
-  if (renderer && renderer.domElement && onStartInteraction && onEndInteraction) {
-    try {
-      renderer.domElement.removeEventListener('mousedown', onStartInteraction)
-      renderer.domElement.removeEventListener('mouseup', onEndInteraction)
-      renderer.domElement.removeEventListener('wheel', onStartInteraction)
-    } catch (e) {
-      console.warn('Error removing event listeners:', e)
+  // Remover event listeners del renderer ANTES de remover el canvas
+  if (renderer && renderer.domElement) {
+    if (onStartInteraction) {
+      try {
+        renderer.domElement.removeEventListener('mousedown', onStartInteraction)
+      } catch (e) {}
+    }
+    if (onEndInteraction) {
+      try {
+        renderer.domElement.removeEventListener('mouseup', onEndInteraction)
+        renderer.domElement.removeEventListener('wheel', onStartInteraction)
+      } catch (e) {}
     }
     onStartInteraction = null
     onEndInteraction = null
   }
   
-  // Limpiar controles
+  // Limpiar controles ANTES de remover el canvas
   if (controls) {
     try {
       controls.dispose()
     } catch (e) {
-      console.warn('Error disposing controls:', e)
+      // Ignorar errores
     }
     controls = null
   }
   
-  // Remover el canvas del DOM de forma segura
+  // CRÍTICO: Remover el canvas del DOM ANTES de que Vue lo intente
+  // Esto debe hacerse de forma muy agresiva y segura
   if (renderer && renderer.domElement) {
+    const canvas = renderer.domElement
+    
+    // Intentar múltiples formas de remover el canvas
     try {
-      const canvas = renderer.domElement
-      // Verificar múltiples condiciones antes de remover
-      if (canvas && canvas.parentNode && containerRef.value && canvas.parentNode === containerRef.value) {
+      // Método 1: Si tiene parentNode y es el containerRef
+      if (canvas.parentNode && containerRef.value && canvas.parentNode === containerRef.value) {
         containerRef.value.removeChild(canvas)
-      } else if (canvas && canvas.parentNode) {
-        // Si el canvas existe pero el containerRef ya no está disponible, intentar remover directamente
+      }
+      // Método 2: Si tiene parentNode pero containerRef ya no existe
+      else if (canvas.parentNode) {
         canvas.parentNode.removeChild(canvas)
       }
+      // Método 3: Si el canvas todavía existe en algún lugar del DOM
+      else if (document.body.contains(canvas)) {
+        document.body.removeChild(canvas)
+      }
     } catch (e) {
-      // Si el elemento ya fue removido, ignorar el error
-      console.warn('Error removing renderer DOM element (may already be removed):', e)
+      // Si falla todo, intentar remover por ID o clase
+      try {
+        if (canvas.id) {
+          const el = document.getElementById(canvas.id)
+          if (el && el.parentNode) {
+            el.parentNode.removeChild(el)
+          }
+        }
+      } catch (e2) {
+        // Ignorar todos los errores - el elemento puede ya estar removido
+      }
     }
     
+    // Dispose del renderer
     try {
       renderer.dispose()
     } catch (e) {
-      console.warn('Error disposing renderer:', e)
+      // Ignorar errores
     }
     renderer = null
   }
@@ -365,31 +396,31 @@ const cleanup = () => {
   if (scene) {
     try {
       scene.traverse((object) => {
-        if (object.isMesh) {
+        if (object && object.isMesh) {
           if (object.geometry) {
             try {
               object.geometry.dispose()
-            } catch (e) {
-              console.warn('Error disposing geometry:', e)
-            }
+            } catch (e) {}
           }
           if (object.material) {
             try {
               if (Array.isArray(object.material)) {
                 object.material.forEach((material) => {
-                  if (material) material.dispose()
+                  if (material) {
+                    try {
+                      material.dispose()
+                    } catch (e) {}
+                  }
                 })
               } else {
                 object.material.dispose()
               }
-            } catch (e) {
-              console.warn('Error disposing material:', e)
-            }
+            } catch (e) {}
           }
         }
       })
     } catch (e) {
-      console.warn('Error traversing scene:', e)
+      // Ignorar errores
     }
     scene = null
   }
@@ -400,10 +431,10 @@ const cleanup = () => {
 
 onMounted(async () => {
   if (process.client) {
-    isMounted = true
+    isMounted.value = true
     // Esperar un tick para asegurar que el DOM esté listo
     await nextTick()
-    if (isMounted && containerRef.value) {
+    if (isMounted.value && containerRef.value) {
       initThreeJS()
     }
   }
