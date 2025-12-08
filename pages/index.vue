@@ -467,11 +467,11 @@ const toolsPoints = computed(() => getTranslationArray('profile.tools.points'))
 
 const downloadCV = () => {
   // Abrir la página del CV ATS donde se puede generar el PDF
-  // Usar la base del router que ya está configurada correctamente
   if (process.client) {
-    const base = router.options.history?.base || '/cv/'
-    const cvAtsPath = `${base}cv-ats`.replace(/\/+/g, '/')
-    window.open(cvAtsPath, '_blank')
+    // Usar el basePath ya calculado y construir la URL completa
+    const currentBase = basePath.value || '/cv/'
+    const cvAtsUrl = `${window.location.origin}${currentBase}cv-ats`
+    window.open(cvAtsUrl, '_blank')
   }
 }
 </script>
