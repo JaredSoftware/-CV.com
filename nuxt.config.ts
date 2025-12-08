@@ -16,8 +16,13 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/cv-ats'],
-      crawlLinks: false
+      routes: ['/'],
+      crawlLinks: false,
+      ignore: ['/cv-ats', 'cv-ats']
+    },
+    routeRules: {
+      '/cv-ats': { prerender: false },
+      'cv-ats': { prerender: false }
     }
   },
   modules: [
