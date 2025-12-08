@@ -108,8 +108,28 @@ const initThreeJS = async () => {
     }
     
     const loader = new GLTFLoader(loadingManager)
+    
+    // Construir la URL completa del modelo
+    let modelUrl = props.modelPath
+    // Si la ruta no comienza con http, asegurarse de que tenga el path correcto
+    if (!modelUrl.startsWith('http')) {
+      // Si no comienza con /, agregar el base path
+      if (!modelUrl.startsWith('/')) {
+        const basePath = window.location.pathname.split('/').slice(0, -1).join('/') || '/cv'
+        modelUrl = `${basePath}/${modelUrl}`.replace(/\/+/g, '/')
+      } else {
+        // Si ya comienza con /, asegurarse de que tenga el base path correcto
+        // En GitHub Pages, el base path es /cv/
+        if (!modelUrl.startsWith('/cv/')) {
+          modelUrl = `/cv${modelUrl}`.replace(/\/+/g, '/')
+        }
+      }
+    }
+    
+    console.log('Loading model from URL:', modelUrl)
+    
     loader.load(
-      props.modelPath,
+      modelUrl,
       (gltf) => {
         model = gltf.scene
         
@@ -149,9 +169,16 @@ const initThreeJS = async () => {
         isLoading.value = false
         animate()
       },
-      undefined, // El progreso se maneja con LoadingManager
+      (progress) => {
+        // Callback de progreso opcional
+        if (progress.lengthComputable) {
+          const percentage = (progress.loaded / progress.total) * 100
+          console.log(`Loading model: ${percentage.toFixed(0)}%`)
+        }
+      },
       (error) => {
         console.error('Error loading GLB model:', error)
+        console.error('Model URL attempted:', modelUrl)
         isLoading.value = false
       }
     )
@@ -238,11 +265,16 @@ const cleanup = () => {
     controls = null
   }
   
-  if (renderer) {
-    renderer.dispose()
-    if (containerRef.value && renderer.domElement && containerRef.value.contains(renderer.domElement)) {
-      containerRef.value.removeChild(renderer.domElement)
+  if (renderer && renderer.domElement) {
+    try {
+      // Verificar que el elemento aún existe y tiene un parentNode antes de removerlo
+      if (containerRef.value && renderer.domElement.parentNode === containerRef.value) {
+        containerRef.value.removeChild(renderer.domElement)
+      }
+    } catch (e) {
+      console.warn('Error removing renderer DOM element:', e)
     }
+    renderer.dispose()
     renderer = null
   }
   
