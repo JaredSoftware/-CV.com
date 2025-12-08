@@ -5,30 +5,40 @@
         <main class="flex-1 py-12 md:py-20">
           <div class="mx-auto flex max-w-6xl flex-col gap-12 px-4">
             <!-- Header -->
-            <header class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div 
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 flex-shrink-0" 
-                style='background-image: url("/jared.jpeg");'
-              ></div>
-              <div class="flex flex-col text-center md:text-left items-center md:items-start gap-4">
-                <div>
-                  <h1 class="text-text-primary-light dark:text-white text-4xl md:text-5xl font-extrabold tracking-tighter">
-                    {{ $t('name') }}
-                  </h1>
-                  <p class="text-primary dark:text-blue-400 text-lg md:text-xl font-medium mt-1">
-                    {{ $t('title') }}
+            <header class="flex flex-col items-center gap-8 md:gap-12">
+              <!-- Modelo 3D -->
+              <Model3D 
+                model-path="/robot.glb"
+                :auto-rotate="true"
+                :rotation-speed="0.005"
+                class="w-full max-w-md"
+              />
+              
+              <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full">
+                <div 
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 flex-shrink-0" 
+                  style='background-image: url("/jared.jpeg");'
+                ></div>
+                <div class="flex flex-col text-center md:text-left items-center md:items-start gap-4">
+                  <div>
+                    <h1 class="text-text-primary-light dark:text-white text-4xl md:text-5xl font-extrabold tracking-tighter">
+                      {{ $t('name') }}
+                    </h1>
+                    <p class="text-primary dark:text-blue-400 text-lg md:text-xl font-medium mt-1">
+                      {{ $t('title') }}
+                    </p>
+                  </div>
+                  <p class="text-text-secondary-light dark:text-text-secondary-dark max-w-xl text-base md:text-lg">
+                    {{ $t('description') }}
                   </p>
+                  <button 
+                    class="group flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-blue-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-blue-600 transition-all duration-300 ease-in-out"
+                    @click="downloadCV"
+                  >
+                    <span class="material-symbols-outlined !text-xl transition-transform duration-300 group-hover:-translate-y-1.5">download</span>
+                    <span class="ml-2 truncate transition-transform duration-300 group-hover:-translate-y-1.5">{{ $t('downloadCV') }}</span>
+                  </button>
                 </div>
-                <p class="text-text-secondary-light dark:text-text-secondary-dark max-w-xl text-base md:text-lg">
-                  {{ $t('description') }}
-                </p>
-                <button 
-                  class="group flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-blue-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-blue-600 transition-all duration-300 ease-in-out"
-                  @click="downloadCV"
-                >
-                  <span class="material-symbols-outlined !text-xl transition-transform duration-300 group-hover:-translate-y-1.5">download</span>
-                  <span class="ml-2 truncate transition-transform duration-300 group-hover:-translate-y-1.5">{{ $t('downloadCV') }}</span>
-                </button>
               </div>
             </header>
 
@@ -371,6 +381,7 @@
 
 <script setup>
 const { locale, tm, messages } = useI18n()
+
 
 // Función para extraer strings de objetos AST o arrays simples
 const extractStrings = (items) => {

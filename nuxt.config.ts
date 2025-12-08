@@ -22,7 +22,8 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/tailwindcss'
   ],
   plugins: ["~/plugins/flowbite.client.ts"],
   i18n: {
