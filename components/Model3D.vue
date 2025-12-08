@@ -109,23 +109,8 @@ const initThreeJS = async () => {
     
     const loader = new GLTFLoader(loadingManager)
     
-    // Construir la URL completa del modelo - usar directamente la prop que ya viene con el path correcto
-    let modelUrl = props.modelPath
-    
-    // Si la ruta no comienza con http/https, construir la URL completa
-    if (!modelUrl.startsWith('http')) {
-      // Si ya tiene el path completo con /cv/, usarlo directamente
-      if (modelUrl.startsWith('/cv/')) {
-        // URL relativa correcta
-        modelUrl = modelUrl
-      } else if (modelUrl.startsWith('/')) {
-        // Si comienza con / pero no tiene /cv/, agregarlo
-        modelUrl = `/cv${modelUrl}`
-      } else {
-        // Si no comienza con /, agregar el base path completo
-        modelUrl = `/cv/${modelUrl}`
-      }
-    }
+    // Usar directamente la prop que ya viene con el path correcto desde el componente padre
+    const modelUrl = props.modelPath
     
     console.log('Loading model from URL:', modelUrl)
     console.log('Model path prop:', props.modelPath)

@@ -17,7 +17,7 @@
               <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full">
                 <div 
                   class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 flex-shrink-0" 
-                  :style='`background-image: url(\"${basePath}jared.jpeg\");`'
+                  :style="{ backgroundImage: `url('${basePath}jared.jpeg')` }"
                 ></div>
                 <div class="flex flex-col text-center md:text-left items-center md:items-start gap-4">
                   <div>
@@ -380,13 +380,17 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const { locale, tm, messages } = useI18n()
-const config = useRuntimeConfig()
 const router = useRouter()
 
 // Obtener el base path para assets
-const basePath = (router.options.history?.base || '/cv/').replace(/\/$/, '') + '/'
-const modelPath = computed(() => `${basePath}robot.glb`)
+const basePath = computed(() => {
+  const base = router.options.history?.base || '/cv/'
+  return base.replace(/\/$/, '') + '/'
+})
+const modelPath = computed(() => `${basePath.value}robot.glb`)
 
 
 // Función para extraer strings de objetos AST o arrays simples
@@ -465,9 +469,8 @@ const downloadCV = () => {
   // Abrir la página del CV ATS donde se puede generar el PDF
   // Usar la base del router que ya está configurada correctamente
   if (process.client) {
-    const router = useRouter()
-    const basePath = router.options.history?.base || '/cv/'
-    const cvAtsPath = `${basePath}cv-ats`.replace(/\/+/g, '/')
+    const base = router.options.history?.base || '/cv/'
+    const cvAtsPath = `${base}cv-ats`.replace(/\/+/g, '/')
     window.open(cvAtsPath, '_blank')
   }
 }
