@@ -121,7 +121,8 @@ const initThreeJS = async () => {
         // Si ya comienza con /, asegurarse de que tenga el base path correcto
         // En GitHub Pages, el base path es /cv/
         if (!modelUrl.startsWith('/cv/')) {
-          modelUrl = `/cv${modelUrl}`.replace(/\/+/g, '/')
+          // Asegurar que tenga la barra diagonal correcta
+          modelUrl = `/cv${modelUrl.startsWith('/') ? '' : '/'}${modelUrl.replace(/^\//, '')}`
         }
       }
     }

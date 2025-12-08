@@ -385,8 +385,8 @@ const config = useRuntimeConfig()
 const router = useRouter()
 
 // Obtener el base path para assets
-const basePath = router.options.history?.base || '/cv/'
-const modelPath = computed(() => `${basePath}robot.glb`.replace(/\/+/g, '/'))
+const basePath = (router.options.history?.base || '/cv/').replace(/\/$/, '') + '/'
+const modelPath = computed(() => `${basePath}robot.glb`)
 
 
 // Función para extraer strings de objetos AST o arrays simples
