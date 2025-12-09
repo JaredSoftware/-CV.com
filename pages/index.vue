@@ -390,7 +390,8 @@ const basePath = computed(() => {
   const base = router.options.history?.base || '/cv/'
   return base.replace(/\/$/, '') + '/'
 })
-const modelPath = computed(() => `${basePath.value}robot.glb`)
+// Usar el modelo optimizado (3.1MB vs 27MB)
+const modelPath = computed(() => `${basePath.value}robot-optimized.glb`)
 
 
 // Función para extraer strings de objetos AST o arrays simples

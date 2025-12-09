@@ -62,8 +62,30 @@ const initThreeJS = async () => {
     const threeModule = await import('three')
     THREE = threeModule.default || threeModule
     
+    // Importar MeshoptDecoder PRIMERO
+    let MeshoptDecoder = null
+    try {
+      const decoderModule = await import('three/examples/jsm/libs/meshopt_decoder.module.js')
+      MeshoptDecoder = decoderModule.MeshoptDecoder || decoderModule.default
+      console.log('MeshoptDecoder imported:', !!MeshoptDecoder)
+      
+      if (MeshoptDecoder) {
+        // Esperar a que el decodificador esté listo
+        if (typeof MeshoptDecoder.ready === 'function') {
+          await MeshoptDecoder.ready()
+          console.log('MeshoptDecoder ready')
+        }
+      }
+    } catch (e) {
+      console.error('Failed to import MeshoptDecoder:', e)
+    }
+    
+    // Importar GLTFLoader DESPUÉS de importar MeshoptDecoder
     const loaderModule = await import('three/examples/jsm/loaders/GLTFLoader.js')
     GLTFLoader = loaderModule.GLTFLoader || loaderModule.default?.GLTFLoader || loaderModule.default
+    console.log('GLTFLoader imported:', !!GLTFLoader)
+    
+    // Nota: MeshoptDecoder se configurará en la instancia del loader, no en la clase
     
     // Pre-cargar OrbitControls para usarlo después
     const controlsModule = await import('three/examples/jsm/controls/OrbitControls.js')
@@ -131,6 +153,18 @@ const initThreeJS = async () => {
     }
     
     const loader = new GLTFLoader(loadingManager)
+    
+    // Configurar MeshoptDecoder en la instancia del loader (método correcto según Three.js docs)
+    if (MeshoptDecoder && loader) {
+      if (typeof loader.setMeshoptDecoder === 'function') {
+        loader.setMeshoptDecoder(MeshoptDecoder)
+        console.log('✅ MeshoptDecoder configured on loader instance via setMeshoptDecoder')
+      } else {
+        // Fallback: asignar directamente si el método no existe
+        loader.meshoptDecoder = MeshoptDecoder
+        console.log('✅ MeshoptDecoder assigned directly to loader instance')
+      }
+    }
     
     // Usar directamente la prop que ya viene con el path correcto desde el componente padre
     const modelUrl = props.modelPath
