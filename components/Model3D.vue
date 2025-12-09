@@ -41,7 +41,6 @@ const props = defineProps({
 const containerRef = ref(null)
 const isLoading = ref(true)
 const isMounted = ref(false)
-const shouldLoad = ref(false)
 let scene = null
 let camera = null
 let renderer = null
@@ -54,10 +53,9 @@ let interactionTimeout = null
 let handleResize = null
 let onStartInteraction = null
 let onEndInteraction = null
-let observer = null
 
 const initThreeJS = async () => {
-  if (!containerRef.value || !process.client || !isMounted.value || !shouldLoad.value) return
+  if (!containerRef.value || !process.client || !isMounted.value) return
   
   try {
     // Importar Three.js solo en el cliente
@@ -126,14 +124,10 @@ const initThreeJS = async () => {
     const loadingManager = new THREE.LoadingManager()
     
     loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
-      const percentage = Math.min((itemsLoaded / itemsTotal) * 100, 100)
+      const percentage = (itemsLoaded / itemsTotal) * 100
       if (percentage < 100) {
-        console.log(`Loading model: ${Math.round(percentage)}%`)
+        console.log(`Loading model: ${percentage.toFixed(0)}%`)
       }
-    }
-    
-    loadingManager.onLoad = () => {
-      console.log('Model loading complete')
     }
     
     const loader = new GLTFLoader(loadingManager)
@@ -201,11 +195,10 @@ const initThreeJS = async () => {
       (progress) => {
         // Callback de progreso opcional
         if (progress && progress.lengthComputable) {
-          const percentage = Math.min((progress.loaded / progress.total) * 100, 100)
-          console.log(`Loading model: ${Math.round(percentage)}%`)
+          const percentage = (progress.loaded / progress.total) * 100
+          console.log(`Loading model: ${percentage.toFixed(0)}%`)
         } else if (typeof progress === 'number') {
-          const percentage = Math.min(progress, 100)
-          console.log(`Loading model: ${Math.round(percentage)}%`)
+          console.log(`Loading model: ${progress}%`)
         }
       },
       (error) => {
@@ -305,19 +298,8 @@ const animate = () => {
 }
 
 const cleanup = () => {
-  // Limpiar observer si existe
-  if (observer && containerRef.value) {
-    try {
-      observer.unobserve(containerRef.value)
-    } catch (e) {
-      // Ignorar errores
-    }
-    observer = null
-  }
-  
   // Marcar como desmontado PRIMERO para detener todas las operaciones
   isMounted.value = false
-  shouldLoad.value = false
   
   // Cancelar animación INMEDIATAMENTE
   if (animationId) {
@@ -453,32 +435,7 @@ onMounted(async () => {
     // Esperar un tick para asegurar que el DOM esté listo
     await nextTick()
     if (isMounted.value && containerRef.value) {
-      // Usar Intersection Observer para lazy loading
-      if ('IntersectionObserver' in window) {
-        observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && !shouldLoad.value) {
-                shouldLoad.value = true
-                initThreeJS()
-                // Dejar de observar una vez que se inicia la carga
-                if (observer && containerRef.value) {
-                  observer.unobserve(containerRef.value)
-                }
-              }
-            })
-          },
-          {
-            rootMargin: '50px', // Comenzar a cargar 50px antes de que sea visible
-            threshold: 0.1
-          }
-        )
-        observer.observe(containerRef.value)
-      } else {
-        // Fallback para navegadores sin Intersection Observer
-        shouldLoad.value = true
-        initThreeJS()
-      }
+      initThreeJS()
     }
   }
 })
