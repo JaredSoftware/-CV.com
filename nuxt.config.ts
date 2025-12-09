@@ -22,8 +22,16 @@ export default defineNuxtConfig({
     },
     routeRules: {
       '/cv-ats': { prerender: false },
-      'cv-ats': { prerender: false }
-    }
+      'cv-ats': { prerender: false },
+      // Optimizar la carga de archivos GLB grandes
+      '/cv/robot.glb': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable',
+          'Content-Encoding': 'gzip'
+        }
+      }
+    },
+    compressPublicAssets: true
   },
   modules: [
     '@nuxtjs/i18n',

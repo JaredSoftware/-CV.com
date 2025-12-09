@@ -26,6 +26,12 @@ watch(locale, (newLocale) => {
   }
 })
 
+const router = useRouter()
+const basePath = computed(() => {
+  const base = router.options.history?.base || '/cv/'
+  return base.replace(/\/$/, '') + '/'
+})
+
 useHead({
   htmlAttrs: {
     class: 'light',
@@ -39,6 +45,14 @@ useHead({
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
+    },
+    // Precargar el modelo 3D con baja prioridad para no bloquear otros recursos
+    {
+      rel: 'preload',
+      href: `${basePath.value}robot.glb`,
+      as: 'fetch',
+      crossorigin: 'anonymous',
+      fetchpriority: 'low'
     }
   ]
 })
