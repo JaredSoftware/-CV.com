@@ -118,6 +118,9 @@
                   </div>
                 </section>
 
+                <!-- GitHub Contributions -->
+                <GitHubContributions username="JaredSoftware" />
+
                 <!-- Projects -->
                 <section>
                   <h2 class="text-text-primary-light dark:text-white text-2xl font-bold tracking-tight mb-6 flex items-center gap-3">

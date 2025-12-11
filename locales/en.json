@@ -12,7 +12,8 @@
     "contactInfo": "Contact Information",
     "skills": "Skills",
     "languages": "Languages",
-    "hobbies": "Hobbies & Interests"
+    "hobbies": "Hobbies & Interests",
+    "githubContributions": "GitHub Contributions"
   },
   "profile": {
     "intro": "With solid experience in web application development, I have acquired deep knowledge in a wide variety of key technologies covering both the server and client sides.",
@@ -212,6 +213,9 @@
       "linkedin": "LinkedIn: linkedin.com/in/jared-wesley-vargas-cortes-0ab9a71a8",
       "portfolio": "Portfolio: lollool2.github.io/-CV.com/"
     }
+  },
+  "githubContributions": {
+    "viewOnGitHub": "View on GitHub"
   }
 }
 
